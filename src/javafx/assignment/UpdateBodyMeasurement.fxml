@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="371.0" style="-fx-background-color: #f4f4f4#f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.assignment.UpdateBodyMeasurementController">
+   <children>
+      <Text fill="#3b3c3f" layoutX="50.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter your new weight:">
+         <font>
+            <Font size="19.0" />
+         </font></Text>
+      <JFXTextField fx:id="fatMass" focusColor="#83c7cd" labelFloat="true" layoutX="109.0" layoutY="255.0" onAction="#addBody" promptText="Fat Mass %" unFocusColor="#757575" />
+      <JFXTextField fx:id="leanMass" focusColor="#83c7cd" labelFloat="true" layoutX="108.0" layoutY="210.0" onAction="#addBody" promptText="Lean Mass %" unFocusColor="#757575" />
+      <JFXTextField fx:id="height" focusColor="#83c7cd" labelFloat="true" layoutX="109.0" layoutY="166.0" onAction="#addBody" promptText="Height" unFocusColor="#757575" />
+      <JFXTextField fx:id="weight" focusColor="#83c7cd" labelFloat="true" layoutX="109.0" layoutY="120.0" onAction="#addBody" promptText="Weight" unFocusColor="#757575" />
+      <JFXDatePicker fx:id="date" defaultColor="#83c7cd" layoutX="103.0" layoutY="72.0" opacity="0.71" promptText="Choose Date" />
+      <Label fx:id="success" layoutX="168.0" layoutY="341.0" text="Label" />
+      <JFXButton fx:id="update" layoutX="107.0" layoutY="309.0" onAction="#addBody" prefHeight="32.0" prefWidth="151.0" ripplerFill="#83c7cd" style="-fx-background-color: #3b3c3f#3b3c3f;" text="Update" textFill="#f4f4f4">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #3b3c3f#3b3c3f;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.assignment.MovementController">
+   <children>
+      <Rectangle fx:id="home" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.0" layoutX="40.0" layoutY="344.0" onMouseClicked="#handleHome" onMousePressed="#handleHome" onMouseReleased="#handleHome" stroke="BLACK" strokeType="INSIDE" width="89.0" />
+      <Text layoutX="65.0" layoutY="370.0" onMouseClicked="#handleHome" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" />
+      <Rectangle fx:id="steps" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="61.0" layoutX="48.0" layoutY="154.0" onMouseClicked="#handleSteps" onMousePressed="#handleSteps" onMouseReleased="#handleSteps" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle fx:id="activities" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="61.0" layoutX="323.0" layoutY="154.0" onMouseClicked="#handleActivities" onMousePressed="#handleActivities" onMouseReleased="#handleActivities" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Text layoutX="134.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steps" />
+      <Text layoutX="395.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Activities" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.assignment.GymAttendanceController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="336.0" layoutX="308.0" layoutY="109.0" stroke="#757575" strokeType="INSIDE" width="485.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="249.0" layoutX="308.0" layoutY="468.0" stroke="#757575" strokeType="INSIDE" width="485.0" />
+      <Text fill="#3b3c3f" layoutX="326.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Times Visited">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#3b3c3f" layoutX="493.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Minutes Visited">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="attendance" layoutX="327.0" layoutY="591.0" text="#" textFill="#616268">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="752.0" stroke="TRANSPARENT" strokeType="INSIDE" width="279.0" />
+      <Rectangle fx:id="home" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="79.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#handleHome" onMousePressed="#handleHome" onMouseReleased="#handleHome" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fx:id="homeText" fill="#e4e4e4" layoutX="62.0" layoutY="50.0" onMouseClicked="#handleHome" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="arrowHome" fitHeight="41.0" fitWidth="47.0" layoutX="8.0" layoutY="21.0" onMouseClicked="#handleHome" onMousePressed="#handleHome" onMouseReleased="#handleHome" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../Images/100297_keyboard_512x512%20(1)%20copy.png" />
+         </image>
+      </ImageView>
+      <Line endX="121.0" endY="7.62939453125E-6" layoutX="158.0" layoutY="82.0" startX="-156.99998474121094" startY="7.62939453125E-6" stroke="#a5f0ff" />
+      <Rectangle fx:id="steps" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="39.0" layoutX="-2.0" layoutY="86.0" onMouseClicked="#handleSteps" onMousePressed="#handleSteps" onMouseReleased="#handleSteps" stroke="#b8b8b800" strokeType="INSIDE" width="281.0" />
+      <Text fill="#8d8d8d" layoutX="64.0" layoutY="114.0" onMouseClicked="#handleSteps" onMousePressed="#handleSteps" onMouseReleased="#handleSteps" strokeType="OUTSIDE" strokeWidth="0.0" text="Steps">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="21.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/footsteps-silhouette-variant.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="physicalActivity" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="43.0" layoutX="1.0" layoutY="124.0" onMouseClicked="#handlePhysicalActivity" onMousePressed="#handlePhysicalActivity" onMouseReleased="#handlePhysicalActivity" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="WHITE" layoutX="64.0" layoutY="152.0" onMouseClicked="#handlePhysicalActivity" onMousePressed="#handlePhysicalActivity" onMouseReleased="#handlePhysicalActivity" strokeType="OUTSIDE" strokeWidth="0.0" text="Physical Activity">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="23.0" fitWidth="35.0" layoutX="22.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/basketball.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="nutrition" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="43.0" layoutX="1.0" layoutY="253.0" onMouseClicked="#handleNutrition" onMousePressed="#handleNutrition" onMouseReleased="#handleNutrition" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="64.0" layoutY="280.0" onMouseClicked="#handleNutrition" onMousePressed="#handleNutrition" onMouseReleased="#handleNutrition" strokeType="OUTSIDE" strokeWidth="0.0" text="Nutrition">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="21.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/apple.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="sleep" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="43.0" layoutX="1.0" layoutY="296.0" onMouseClicked="#handleSleep" onMousePressed="#handleSleep" onMouseReleased="#handleSleep" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="64.0" layoutY="322.0" onMouseClicked="#handleSleep" onMousePressed="#handleSleep" onMouseReleased="#handleSleep" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="21.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/bed.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="heartRate" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="39.0" layoutX="1.0" layoutY="339.0" onMouseClicked="#handleHeartRate" onMousePressed="#handleHeartRate" onMouseReleased="#handleHeartRate" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="61.0" layoutY="364.0" onMouseClicked="#handleHeartRate" onMousePressed="#handleHeartRate" onMouseReleased="#handleHeartRate" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart Rate">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="19.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/cardiogram.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="bodyMeasurments" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="39.0" layoutX="1.0" layoutY="378.0" onMouseClicked="#handleBodyMeasurements" onMousePressed="#handleBodyMeasurements" onMouseReleased="#handleBodyMeasurements" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="59.0" layoutY="400.0" onMouseClicked="#handleBodyMeasurements" onMousePressed="#handleBodyMeasurements" onMouseReleased="#handleBodyMeasurements" strokeType="OUTSIDE" strokeWidth="0.0" text="Body Measurements">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="20.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/scale.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="mentalWellbeing" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="41.0" layoutX="1.0" layoutY="417.0" onMouseClicked="#handleMentalWellbeing" onMousePressed="#handleMentalWellbeing" onMouseReleased="#handleMentalWellbeing" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="61.0" layoutY="444.0" onMouseClicked="#handleMentalWellbeing" onMousePressed="#handleMentalWellbeing" onMouseReleased="#handleMentalWellbeing" strokeType="OUTSIDE" strokeWidth="0.0" text="Mental Welbeing">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="20.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/success.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="professional" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="41.0" layoutX="1.0" layoutY="458.0" onMouseClicked="#handleProfessional" onMousePressed="#handleProfessional" onMouseReleased="#handleProfessional" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fx:id="textProfessional" fill="#8d8d8d" layoutX="62.0" layoutY="487.0" onMouseClicked="#handleProfessional" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional View">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="17.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/doctor.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="physicalActivity1" arcHeight="5.0" arcWidth="5.0" fill="#aee8f8" height="27.0" layoutX="-1.0" layoutY="170.0" onMouseClicked="#handlePhysicalActivity" onMousePressed="#handlePhysicalActivity" onMouseReleased="#handlePhysicalActivity" stroke="#b8b8b800" strokeType="INSIDE" width="281.0" />
+      <Rectangle fx:id="physicalActivity11" arcHeight="5.0" arcWidth="5.0" fill="#aee8f8" height="27.0" layoutX="-1.0" layoutY="196.0" onMouseClicked="#handleResistance" onMousePressed="#handleResistance" onMouseReleased="#handleResistance" stroke="#b8b8b800" strokeType="INSIDE" width="281.0" />
+      <Rectangle fx:id="physicalActivity12" arcHeight="5.0" arcWidth="5.0" fill="#80cbdd" height="27.0" layoutX="-1.0" layoutY="222.0" onMouseClicked="#handleGym" onMousePressed="#handleGym" onMouseReleased="#handleGym" stroke="#b8b8b800" strokeType="INSIDE" width="281.0" />
+      <Text fill="#727272" layoutX="100.0" layoutY="189.0" onMouseClicked="#handlePhysicalActivity" onMousePressed="#handlePhysicalActivity" onMouseReleased="#handlePhysicalActivity" strokeType="OUTSIDE" strokeWidth="0.0" text="Aerobic Exercise">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="20.0" fitWidth="35.0" layoutX="213.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@../Images/100297_keyboard_512x512%20(1).png" />
+         </image>
+      </ImageView>
+      <Text fill="#727272" layoutX="79.0" layoutY="215.0" onMouseClicked="#handleResistance" onMousePressed="#handleResistance" onMouseReleased="#handleResistance" strokeType="OUTSIDE" strokeWidth="0.0" text="Resistance Exercise">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="20.0" fitWidth="35.0" layoutX="214.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Picture1.png" />
+         </image>
+      </ImageView>
+      <Text fill="#171717" layoutX="99.0" layoutY="239.0" onMouseClicked="#handleGym" onMousePressed="#handleGym" onMouseReleased="#handleGym" strokeType="OUTSIDE" strokeWidth="0.0" text="Gym Attendance">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="20.0" fitWidth="35.0" layoutX="214.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Picture1.png" />
+         </image>
+      </ImageView>
+      <Line endX="934.0" endY="-0.5" layoutX="366.0" layoutY="83.0" startX="-86.5" startY="-0.4999847412109375" stroke="#dadada" />
+      <Label layoutX="294.0" layoutY="40.0" text="Gym Attendance" textFill="#616268">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="mins" layoutX="494.0" layoutY="587.0" text="###" textFill="#616268">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Text fill="#616268" layoutX="339.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose today's date:">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <Text fill="#616268" layoutX="339.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Did you visit gym today ">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Label fx:id="addLabel" layoutX="337.0" layoutY="415.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <JFXDatePicker fx:id="today" defaultColor="#83c7cd" layoutX="339.0" layoutY="195.0" prefHeight="29.0" prefWidth="260.0" promptText="Choose Today's Date" />
+      <JFXTextField fx:id="userMinutes" focusColor="#66c7e8" labelFloat="true" layoutX="414.0" layoutY="275.0" prefHeight="27.0" prefWidth="146.0" promptText="Minutes Spent" />
+      <JFXButton fx:id="addUpdate" layoutX="336.0" layoutY="373.0" onAction="#handleYes" onMouseClicked="#handleYes" onMousePressed="#handleYes" onMouseReleased="#handleYes" ripplerFill="#94d5eb" style="-fx-background-color: #3b3c3f#3b3c3f;" text="Add Update" textFill="#a5f0ff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Rectangle fx:id="overall" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="41.0" layoutX="1.0" layoutY="499.0" onMouseClicked="#handleOverall" onMousePressed="#handleOverall" onMouseReleased="#handleOverall" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="62.0" layoutY="527.0" onMouseClicked="#handleOverall" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall Dashboard">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="17.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/worldwide.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="326.0" layoutY="485.0" text="Statistics" textFill="#3b3c3f">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="70.0" layoutX="704.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/weight.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="338.0" layoutY="125.0" text="Gym Log" textFill="#3b3c3f">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="yes" layoutX="339.0" layoutY="275.0" onAction="#handleYes" onMouseClicked="#handleYes" onMousePressed="#handleYes" onMouseReleased="#handleYes" prefHeight="29.0" prefWidth="60.0" ripplerFill="#83c7cd" style="-fx-background-color: #3b3c3f#3b3c3f;" text="Yes" textFill="#f4f4f4">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="no" layoutX="338.0" layoutY="320.0" onAction="#handleNo" onMouseClicked="#handleYes" onMousePressed="#handleYes" onMouseReleased="#handleYes" prefHeight="29.0" prefWidth="60.0" ripplerFill="#83c7cd" style="-fx-background-color: #3b3c3f#3b3c3f;" text="No" textFill="#f4f4f4">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="70.0" layoutX="705.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/weight%20copy.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="610.0" layoutX="837.0" layoutY="106.0" stroke="#757575" strokeType="INSIDE" width="441.0" />
+      <ImageView fitHeight="377.0" fitWidth="368.0" layoutX="871.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/827000c564e21e1ab79e0870ae44a134-fitness-woman-silhouette-running-by-vexels.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="853.0" layoutY="188.0" prefHeight="400.0" prefWidth="400.0" style="-fx-border-color: #546a7a#546a7a;" styleClass="round-box" stylesheets="@ChartsCSS.css">
+         <children>
+            <JFXSpinner prefHeight="371.0" prefWidth="383.0" />
+         </children></HBox>
+      <Label fx:id="since1" layoutX="327.0" layoutY="568.0" text="since" textFill="#6f7278" />
+      <Label fx:id="since2" layoutX="494.0" layoutY="568.0" text="since" textFill="#6f7278" />
+      <Text fill="#3b3c3f" layoutX="328.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Average Minutes per Visit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="avg" layoutX="325.0" layoutY="662.0" text="##" textFill="#616268">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Label fx:id="since11" layoutX="568.0" layoutY="606.0" text="Minutes" textFill="#6f7278" />
+      <Label fx:id="since111" layoutX="376.0" layoutY="683.0" text="Minutes" textFill="#6f7278" />
+   </children>
+</AnchorPane>

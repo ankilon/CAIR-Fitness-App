@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ProgressIndicator?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #f4f4f4#f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.assignment.StepsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="196.0" layoutX="304.0" layoutY="195.0" stroke="#757575" strokeType="INSIDE" width="416.0" />
+      <Text fill="#3b3c3f" layoutX="303.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHOOSE DATE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="317.0" layoutX="305.0" layoutY="411.0" stroke="#757575" strokeType="INSIDE" width="971.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="752.0" stroke="TRANSPARENT" strokeType="INSIDE" width="279.0" />
+      <Rectangle fx:id="home" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="79.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#handleHome" onMousePressed="#handleHome" onMouseReleased="#handleHome" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#e4e4e4" layoutX="62.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="41.0" fitWidth="47.0" layoutX="8.0" layoutY="21.0" onMouseClicked="#handleHome" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../Images/100297_keyboard_512x512%20(1)%20copy.png" />
+         </image>
+      </ImageView>
+      <Line endX="121.0" endY="7.62939453125E-6" layoutX="158.0" layoutY="82.0" startX="-156.99998474121094" startY="7.62939453125E-6" stroke="#a5f0ff" />
+      <Rectangle fx:id="steps" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="39.0" layoutX="-2.0" layoutY="86.0" onMouseClicked="#handleSteps" onMousePressed="#handleSteps" onMouseReleased="#handleSteps" stroke="#b8b8b800" strokeType="INSIDE" width="281.0" />
+      <Text fill="WHITE" layoutX="64.0" layoutY="114.0" onMouseClicked="#handleSteps" onMousePressed="#handleSteps" onMouseReleased="#handleSteps" strokeType="OUTSIDE" strokeWidth="0.0" text="Steps">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="21.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/footsteps-silhouette-variant.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="physicalActivity" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="43.0" layoutX="1.0" layoutY="124.0" onMouseClicked="#handlePhysicalActivity" onMousePressed="#handlePhysicalActivity" onMouseReleased="#handlePhysicalActivity" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="64.0" layoutY="152.0" onMouseClicked="#handlePhysicalActivity" onMousePressed="#handlePhysicalActivity" onMouseReleased="#handlePhysicalActivity" strokeType="OUTSIDE" strokeWidth="0.0" text="Physical Activity">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="23.0" fitWidth="35.0" layoutX="22.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/basketball.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="nutrition" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="43.0" layoutX="1.0" layoutY="167.0" onMouseClicked="#handleNutrition" onMousePressed="#handleNutrition" onMouseReleased="#handleNutrition" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="64.0" layoutY="194.0" onMouseClicked="#handleNutrition" onMousePressed="#handleNutrition" onMouseReleased="#handleNutrition" strokeType="OUTSIDE" strokeWidth="0.0" text="Nutrition">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="21.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/apple.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="sleep" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="43.0" layoutX="1.0" layoutY="210.0" onMouseClicked="#handleSleep" onMousePressed="#handleSleep" onMouseReleased="#handleSleep" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="64.0" layoutY="236.0" onMouseClicked="#handleSleep" onMousePressed="#handleSleep" onMouseReleased="#handleSleep" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="21.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/bed.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="heartRate" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="39.0" layoutX="1.0" layoutY="253.0" onMouseClicked="#handleHome" onMousePressed="#handleHome" onMouseReleased="#handleHome" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="61.0" layoutY="278.0" onMouseClicked="#handleHeartRate" onMousePressed="#handleHeartRate" onMouseReleased="#handleHeartRate" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart Rate">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="19.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/cardiogram.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="bodyMeasurments" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="39.0" layoutX="1.0" layoutY="292.0" onMouseClicked="#handleBodyMeasurements" onMousePressed="#handleBodyMeasurements" onMouseReleased="#handleBodyMeasurements" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="59.0" layoutY="316.0" onMouseClicked="#handleBodyMeasurements" onMousePressed="#handleBodyMeasurements" onMouseReleased="#handleBodyMeasurements" strokeType="OUTSIDE" strokeWidth="0.0" text="Body Measurements">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="20.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/scale.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="mentalWellbeing" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="41.0" layoutX="1.0" layoutY="331.0" onMouseClicked="#handleMentalWellbeing" onMousePressed="#handleMentalWellbeing" onMouseReleased="#handleMentalWellbeing" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="61.0" layoutY="358.0" onMouseClicked="#handleMentalWellbeing" onMousePressed="#handleMentalWellbeing" onMouseReleased="#handleMentalWellbeing" strokeType="OUTSIDE" strokeWidth="0.0" text="Mental Welbeing">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="20.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/success.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="professional" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="41.0" layoutX="1.0" layoutY="372.0" onMouseClicked="#handleProfessional" onMousePressed="#handleProfessional" onMouseReleased="#handleProfessional" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="62.0" layoutY="401.0" onMouseClicked="#handleProfessional" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional View">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="19.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/doctor.png" />
+         </image>
+      </ImageView>
+      <Line endX="891.0" endY="0.500030517578125" layoutX="409.0" layoutY="82.0" startX="-129.5" startY="0.5" stroke="#dadada" />
+      <Label layoutX="304.0" layoutY="41.0" text="Steps" textFill="#616268">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <HBox layoutX="1036.0" layoutY="444.0" prefHeight="210.0" prefWidth="210.0" style="-fx-border-color: #546a7a#546a7a;" styleClass="round-box" stylesheets="@ChartsCSS.css">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="802.0" layoutY="442.0" prefHeight="210.0" prefWidth="210.0" style="-fx-border-color: #546a7a#546a7a;" styleClass="round-box" stylesheets="@ChartsCSS.css">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="565.0" layoutY="438.0" prefHeight="210.0" prefWidth="210.0" style="-fx-border-color: #546a7a#546a7a;" styleClass="round-box" stylesheets="@ChartsCSS.css">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="334.0" layoutY="435.0" prefHeight="210.0" prefWidth="210.0" style="-fx-border-color: #546a7a#546a7a;" styleClass="round-box" stylesheets="@ChartsCSS.css">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <ProgressIndicator fx:id="flightStairsIndicator" layoutX="815.0" layoutY="454.0" prefHeight="204.0" prefWidth="449.0" progress="0.23" radius="90.0" styleClass="progressIndicator2" stylesheets="@ChartsCSS.css" />
+      <ProgressIndicator fx:id="caloriesBurntIndicator" layoutX="1049.0" layoutY="456.0" prefHeight="204.0" prefWidth="449.0" progress="0.46" radius="90.0" styleClass="progressIndicator2" stylesheets="@ChartsCSS.css" />
+      <ProgressIndicator fx:id="totalDistanceIndicator" layoutX="578.0" layoutY="450.0" prefHeight="204.0" prefWidth="449.0" progress="0.79" radius="90.0" styleClass="progressIndicator2" stylesheets="@ChartsCSS.css" />
+      <ProgressIndicator fx:id="totalStepsIndicator" layoutX="346.0" layoutY="447.0" prefHeight="204.0" prefWidth="449.0" progress="0.53" radius="90.0" styleClass="progressIndicator2" stylesheets="@ChartsCSS.css" />
+      <Label fx:id="currentSteps" alignment="TOP_CENTER" layoutX="346.0" layoutY="510.0" prefHeight="60.0" prefWidth="188.0" text="4444" textFill="#616268">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentCaloriesBurnt" layoutX="1096.0" layoutY="512.0" text="444" textFill="#616268">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Text fill="#616268" layoutX="1083.0" layoutY="694.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calories Burnt:">
+         <font>
+            <Font size="19.0" />
+         </font></Text>
+      <Label fx:id="distanceToday" alignment="TOP_CENTER" layoutX="651.0" layoutY="511.0" text="Dis" textAlignment="CENTER" textFill="#616268">
+         <font>
+            <Font size="49.0" />
+         </font>
+      </Label>
+      <Text fill="#616268" layoutX="556.0" layoutY="694.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Distance Walked:">
+         <font>
+            <Font size="19.0" />
+         </font></Text>
+      <Label fx:id="stairs" alignment="TOP_CENTER" layoutX="895.0" layoutY="507.0" text="S" textAlignment="CENTER" textFill="#616268">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Text fill="#616268" layoutX="796.0" layoutY="694.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flights of Stairs Climbed:">
+         <font>
+            <Font size="19.0" />
+         </font></Text>
+      <Text fill="#616268" layoutX="363.0" layoutY="692.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steps for Today:">
+         <font>
+            <Font size="19.0" />
+         </font></Text>
+      <Text fill="#616268" layoutX="416.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steps">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#616268" layoutX="654.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Km">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#616268" layoutX="1124.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KCal">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#616268" layoutX="845.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flights Climbed">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Label fx:id="idealS" layoutX="317.0" layoutY="232.0" text="ideal steps" textFill="#5a5b61">
+         <font>
+            <Font size="39.0" />
+         </font></Label>
+      <JFXDatePicker fx:id="stepDate" defaultColor="#83c7cd" layoutX="304.0" layoutY="137.0" onAction="#handleLoadSteps" opacity="0.68" prefHeight="29.0" prefWidth="400.0" promptText="Select Date" />
+      <Text fill="#3b3c3f" layoutX="318.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ideal Number of Steps">
+         <font>
+            <Font size="19.0" />
+         </font></Text>
+      <JFXTextField fx:id="userIdeal" focusColor="#7adef2" labelFloat="true" layoutX="319.0" layoutY="290.0" onAction="#updateIdeal" promptText="Ideal Number of Steps" />
+      <JFXButton fx:id="update" layoutX="319.0" layoutY="332.0" onAction="#updateIdeal" prefHeight="32.0" prefWidth="88.0" ripplerFill="#83c7cd" style="-fx-background-color: #3b3c3f#3b3c3f;" text="Update" textFill="#a5f0ff">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="30.0" layoutX="420.0" layoutY="595.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/shoes.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="30.0" layoutX="655.0" layoutY="597.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/distance.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="30.0" layoutX="887.0" layoutY="596.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/goal%20copy.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="30.0" layoutX="1126.0" layoutY="598.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/calories.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="overall" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="41.0" layoutX="1.0" layoutY="413.0" onMouseClicked="#handleOverall" onMousePressed="#handleOverall" onMouseReleased="#handleOverall" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="62.0" layoutY="441.0" onMouseClicked="#handleOverall" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall Dashboard">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="17.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/worldwide.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="289.0" layoutX="743.0" layoutY="101.0" stroke="#757575" strokeType="INSIDE" width="531.0" />
+      <StackedBarChart fx:id="stackedBarChart" layoutX="745.0" layoutY="102.0" prefHeight="289.0" prefWidth="527.0" stylesheets="@ChartsCSS.css">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+      <ImageView fitHeight="150.0" fitWidth="60.0" layoutX="648.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/goal.png" />
+         </image>
+      </ImageView>
+      <Text fill="#616268" layoutX="737.0" layoutY="245.0" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steps" />
+      <Text fill="#616268" layoutX="1003.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+      <JFXDatePicker fx:id="firstD" defaultColor="#83c7cd" layoutX="836.0" layoutY="48.0" onAction="#updateLine" opacity="0.7" promptText="From:" />
+      <JFXDatePicker fx:id="secondD" defaultColor="#83c7cd" layoutX="1038.0" layoutY="48.0" onAction="#updateLine" opacity="0.7" promptText="To:" />
+      <Text fill="#616268" layoutX="746.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Load Chart: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Label fx:id="validation" layoutX="1038.0" layoutY="23.0" text="validation" />
+   </children>
+</AnchorPane>

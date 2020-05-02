@@ -1,0 +1,100 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/04/2019, 6:26:38 PM
+    Author     : Iris
+*/
+
+.chart-bar {
+    -fx-bar-fill: #5f6168;
+}
+
+.default-color0.chart-bar { 
+    -fx-bar-fill: #8ce6ff; 
+}
+
+.rectangle {
+    -fx-background-color: linear-gradient (to right, #546a7a,#8ce6ff);
+}
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
+.table-view, .tree-table-view {
+    /* Constants used throughout the tableview. */
+    -fx-table-header-border-color: #3b3c3f;
+    -fx-table-cell-border-color: -fx-box-border; /* Horizontal Lines*/
+    -fx-background-color: transparent;
+}
+
+/* The column header row is made up of a number of column-header, one for each
+   TableColumn, and a 'filler' area that extends from the right-most column
+   to the edge of the tableview, or up to the 'column control' button. */
+.table-view .filler, .tree-table-view .filler, .table-view .column-header,
+.tree-table-view .column-header {
+    -fx-size: 65;
+    -fx-border-style: null;
+    -fx-border-color: #3b3c3f ;
+    -fx-border-width: 0 0 2 0;
+    -fx-background-color: transparent;
+}
+
+.table-view .show-hide-columns-button, .tree-table-view .show-hide-columns-button
+{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label, .table-view .filler .label,
+.table-view .column-drag-header .label, .tree-table-view .column-header .label,
+.tree-table-view .filler .label, .tree-table-view .column-drag-header .label
+{
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-view .column-header-background, .tree-table-view .column-header-background
+{
+    -fx-background-color: transparent;
+}
+
+.table-row-cell, .tree-table-row-cell {
+    -fx-cell-size: 40px;
+}
+
+.table-cell {
+    -fx-border-color: transparent; /* Vertical Lines*/
+    -fx-border-width: 1;
+}
+
+.progressIndicator{
+    -fx-color: #f48342; 
+    -fx-indicator-width:7px;
+}
+
+.progressIndicator2{
+    -fx-color: #83c7cd;
+    -fx-indicator-width:7px;
+}
+
+.round-box {
+    -fx-background-radius:100%;
+    -fx-border-radius:100%;
+    -fx-border-width:7px; 
+}
+
+.default-color0.chart-pie { -fx-pie-color: #aee8f8;  }
+.default-color1.chart-pie { -fx-pie-color: #3b3c3f; }
+.default-color2.chart-pie { -fx-pie-color: #83c7cd; }
+
+.progress-bar {-fx-accent: #aee8f8;}
+
+.default-color0.chart-bar { -fx-bar-fill: #aee8f8; }
+.default-color1.chart-bar { -fx-bar-fill: #3b3c3f; }

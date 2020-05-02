@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.assignment.SharedFolderFAQController">
+   <children>
+      <Label layoutX="24.0" layoutY="-3.0" prefHeight="63.0" prefWidth="596.0" text="Click 'Export to CSV' to export to a CSV file. This file can be used in documents such as Excel." wrapText="true" />
+      <Text layoutX="24.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Where to find my CSV file?">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Label layoutX="29.0" layoutY="68.0" prefHeight="94.0" prefWidth="596.0" text="Unfortunately, this version of the app only supports exporting CSV files to Macbooks. We will keep you updated when this feature becomes available on other devices!" wrapText="true" />
+      <Label layoutX="29.0" layoutY="141.0" prefHeight="44.0" prefWidth="596.0" text="After clicking 'Export to CSV', open your finder on Mac and search for your 'Shared' folder:" wrapText="true" />
+      <ImageView fitHeight="123.0" fitWidth="232.0" layoutX="34.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Screen%20Shot%202019-04-23%20at%207.45.59%20pm.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#1f93ff00" layoutX="195.0" layoutY="245.0" radius="35.0" stroke="RED" strokeType="INSIDE" strokeWidth="3.0" />
+      <Label layoutX="24.0" layoutY="321.0" prefHeight="44.0" prefWidth="527.0" text="The CSV file will be located in there." wrapText="true" />
+   </children>
+</AnchorPane>

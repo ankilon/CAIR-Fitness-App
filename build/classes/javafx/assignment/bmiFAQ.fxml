@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="javafx.assignment.BmiFAQController">
+   <children>
+      <ImageView fitHeight="423.0" fitWidth="548.0" layoutX="168.0" layoutY="-11.0">
+         <image>
+            <Image url="@../Images/bmi-to-weight-sayin-mainelycommerce-com-men-s-bmi-chart-by-age.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="151.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Body mass index, or BMI, is one way to assess whether your weight is in the healthy range. The BMI combines a person’s height and weight to form a measure that can help predict their risk of developing disease. " textAlignment="CENTER" wrappingWidth="622.8460693359375" />
+   </children>
+</AnchorPane>

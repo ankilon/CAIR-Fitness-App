@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #3b3c3f#3b3c3f;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.assignment.ScreenController">
+   <children>
+      <Pane fx:id="paneMental" layoutX="239.0" layoutY="507.0" onMouseClicked="#handleMentalButton" onMousePressed="#handleMentalButton" onMouseReleased="#handleMentalButton" opacity="0.76" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #2a2b2d#2a2b2d;">
+         <children>
+            <Text fill="#d3d3d3" layoutX="11.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mental Wellbeing" wrappingWidth="257.7748718261719">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <Text fill="#8ce6ff" layoutX="11.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This allows you to log your mood and gives you time to take Mindful Minutes." wrappingWidth="215.10946655273438">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneProfessional" layoutX="590.0" layoutY="506.0" onMouseClicked="#handleProfessional" onMousePressed="#handleProfessional" onMouseReleased="#handleProfessional" opacity="0.76" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #2a2b2d#2a2b2d;">
+         <children>
+            <Text fill="#d3d3d3" layoutX="13.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional View" wrappingWidth="257.43804931640625">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <Text fill="#8ce6ff" layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This displays summarised views for and from healthcare professionals and fitness professionals." wrappingWidth="215.10946655273438">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="forMyHealthProfessional" fitHeight="50.0" fitWidth="50.0" layoutX="259.0" layoutY="11.0">
+               <image>
+                  <Image url="@../Images/doctor.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneOverall" layoutX="944.0" layoutY="504.0" onMouseClicked="#handleOverall" onMousePressed="#handleOverall" onMouseReleased="#handleOverall" opacity="0.76" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #2a2b2d#2a2b2d;">
+         <children>
+            <Text fill="#d3d3d3" layoutX="13.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall Health" wrappingWidth="244.8229370117187">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <Text fill="#8ce6ff" layoutX="13.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This displays ratings of your health progress so you can see how you're going!" wrappingWidth="215.10946655273438">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="overall" fitHeight="50.0" fitWidth="50.0" layoutX="258.0" layoutY="13.0" onMouseClicked="#handleOverall" onMousePressed="#handleOverall" onMouseReleased="#handleOverall">
+               <image>
+                  <Image url="@../Images/worldwide.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSteps" layoutX="239.0" layoutY="41.0" onMouseClicked="#handleStepsButton" onMousePressed="#handleStepsButton" onMouseReleased="#handleStepsButton" opacity="0.76" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #2a2b2d#2a2b2d;">
+         <children>
+            <ImageView fx:id="steps" fitHeight="50.0" fitWidth="50.0" layoutX="258.0" layoutY="14.0" onMouseClicked="#handleStepsButton" onMousePressed="#handleStepsButton" onMouseReleased="#handleStepsButton">
+               <image>
+                  <Image url="@../Images/footsteps-silhouette-variant.png" />
+               </image>
+            </ImageView>
+            <Text fill="#d3d3d3" layoutX="13.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steps" wrappingWidth="191.29705496868382">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <Text fill="#8ce6ff" layoutX="13.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This outlines the users step count, distance and total calories burnt." wrappingWidth="235.10946655273438">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="panePhysical" layoutX="590.0" layoutY="40.0" onMouseClicked="#handlePhysicalActivityButton" onMousePressed="#handlePhysicalActivityButton" onMouseReleased="#handlePhysicalActivityButton" opacity="0.76" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #2a2b2d#2a2b2d;">
+         <children>
+            <ImageView fx:id="physActivity" fitHeight="50.0" fitWidth="50.0" layoutX="259.0" layoutY="13.0" onMouseClicked="#handlePhysicalActivityButton" onMousePressed="#handlePhysicalActivityButton" onMouseReleased="#handlePhysicalActivityButton">
+               <image>
+                  <Image url="@../Images/basketball.png" />
+               </image>
+            </ImageView>
+            <Text fill="#d3d3d3" layoutX="12.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Physical Activity" wrappingWidth="244.82293701171875">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <Text fill="#8ce6ff" layoutX="11.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This outlines the type of activity, hours, calories burnt and allows the users to insert data. " wrappingWidth="235.10946655273438">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneNutrition" layoutX="944.0" layoutY="38.0" onMouseClicked="#handleNutritionButton" onMousePressed="#handleNutritionButton" onMouseReleased="#handleNutritionButton" opacity="0.76" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #2a2b2d#2a2b2d;">
+         <children>
+            <ImageView fx:id="nutrition" fitHeight="50.0" fitWidth="50.0" layoutX="257.0" layoutY="11.0" onMouseClicked="#handleNutritionButton" onMousePressed="#handleNutritionButton" onMouseReleased="#handleNutritionButton">
+               <image>
+                  <Image url="@../Images/apple.png" />
+               </image>
+            </ImageView>
+            <Text fill="#d3d3d3" layoutX="12.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nutrition">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <Text fill="#8ce6ff" layoutX="12.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This displays the type of food the user has consumed, total calories consumed and amount consumed." wrappingWidth="235.10946655273438">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSleep" layoutX="240.0" layoutY="273.0" onMouseClicked="#handleSleepButton" onMousePressed="#handleSleepButton" onMouseReleased="#handleSleepButton" opacity="0.76" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #2a2b2d#2a2b2d;">
+         <children>
+            <ImageView fx:id="sleep" fitHeight="50.0" fitWidth="50.0" layoutX="258.0" layoutY="14.0" onMouseClicked="#handleSleepButton" onMousePressed="#handleSleepButton" onMouseReleased="#handleSleepButton">
+               <image>
+                  <Image url="@../Images/bed.png" />
+               </image>
+            </ImageView>
+            <Text fill="#d3d3d3" layoutX="11.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <Text fill="#8ce6ff" layoutX="11.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This outlines the hours of sleep and sleep quality." wrappingWidth="215.10946655273438">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneHeartRate" layoutX="591.0" layoutY="272.0" onMouseClicked="#handleHeartRateButton" onMousePressed="#handleHeartRateButton" onMouseReleased="#handleHeartRateButton" opacity="0.76" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #2a2b2d#2a2b2d;">
+         <children>
+            <ImageView fx:id="heartRate" fitHeight="50.0" fitWidth="50.0" layoutX="259.0" layoutY="12.0" onMouseClicked="#handleHeartRateButton" onMousePressed="#handleHeartRateButton" onMouseReleased="#handleHeartRateButton">
+               <image>
+                  <Image url="@../Images/cardiogram.png" />
+               </image>
+            </ImageView>
+            <Text fill="#d3d3d3" layoutX="11.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart Rate">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <Text fill="#8ce6ff" layoutX="12.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This displays the max, min and average heartrate during the day." wrappingWidth="215.10946655273438">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneBody" layoutX="945.0" layoutY="270.0" onMouseClicked="#handleBodyMeasurementsButton" onMousePressed="#handleBodyMeasurementsButton" onMouseReleased="#handleBodyMeasurementsButton" opacity="0.76" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #2a2b2d#2a2b2d;">
+         <children>
+            <ImageView fx:id="measurements" fitHeight="50.0" fitWidth="50.0" layoutX="259.0" layoutY="12.0" onMouseClicked="#handleBodyMeasurementsButton" onMousePressed="#handleBodyMeasurementsButton" onMouseReleased="#handleBodyMeasurementsButton">
+               <image>
+                  <Image url="@../Images/scale.png" />
+               </image>
+            </ImageView>
+            <Text fill="#d3d3d3" layoutX="11.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Body Measurements" wrappingWidth="244.8229370117187">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <Text fill="#8ce6ff" layoutX="12.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This displays weight, height, BMI and the user goals." wrappingWidth="215.10946655273438">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text layoutX="334.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <ImageView fx:id="mental" fitHeight="50.0" fitWidth="50.0" layoutX="497.0" layoutY="520.0" onMouseClicked="#handleMentalButton" onMousePressed="#handleMentalButton" onMouseReleased="#handleMentalButton">
+         <image>
+            <Image url="@../Images/success.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="53.0" layoutY="112.0" prefHeight="136.0" prefWidth="136.0" style="-fx-border-color: #546a7a#546a7a;" styleClass="round-box" stylesheets="@ChartsCSS.css" />
+      <Text fill="#ababab" layoutX="-5.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Take CAIR of your health!&quot;" textAlignment="CENTER" wrappingWidth="253.71832275390625">
+         <font>
+            <Font name="DIN Alternate Bold" size="23.0" />
+         </font>
+      </Text>
+      <JFXSpinner layoutX="65.0" layoutY="124.0" prefHeight="110.0" prefWidth="110.0">
+         <effect>
+            <Bloom />
+         </effect></JFXSpinner>
+      <ImageView fitHeight="150.0" fitWidth="80.0" layoutX="81.0" layoutY="139.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1200520.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="69.0" layoutY="244.0" text="CAIR." textAlignment="CENTER" textFill="#e4e4e4">
+         <font>
+            <Font name="Avenir Next Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="289.0" text="Health" textAlignment="CENTER" textFill="#a5f0ff">
+         <font>
+            <Font name="DIN Alternate Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

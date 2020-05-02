@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #f4f4f4#f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.assignment.NutritionController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="752.0" stroke="TRANSPARENT" strokeType="INSIDE" width="279.0" />
+      <Rectangle fx:id="home" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="79.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#handleHome" onMouseReleased="#handleHome" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#e4e4e4" layoutX="62.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="41.0" fitWidth="47.0" layoutX="8.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../Images/100297_keyboard_512x512%20(1)%20copy.png" />
+         </image>
+      </ImageView>
+      <Line endX="121.0" endY="7.62939453125E-6" layoutX="158.0" layoutY="82.0" startX="-156.99998474121094" startY="7.62939453125E-6" stroke="#a5f0ff" />
+      <Rectangle fx:id="steps" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="39.0" layoutX="-2.0" layoutY="86.0" onMouseClicked="#handleSteps" stroke="#b8b8b800" strokeType="INSIDE" width="281.0" />
+      <Text fill="#8d8d8d" layoutX="64.0" layoutY="114.0" onMouseClicked="#handleSteps" onMousePressed="#handleSteps" strokeType="OUTSIDE" strokeWidth="0.0" text="Steps">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="21.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/footsteps-silhouette-variant.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="physicalActivity" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="43.0" layoutX="1.0" layoutY="124.0" onMouseClicked="#handlePhysicalActivity" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="64.0" layoutY="152.0" onMouseClicked="#handlePhysicalActivity" strokeType="OUTSIDE" strokeWidth="0.0" text="Physical Activity">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="23.0" fitWidth="35.0" layoutX="22.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/basketball.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="nutrition" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="43.0" layoutX="1.0" layoutY="167.0" onMouseClicked="#handleNutrition" onMousePressed="#handleNutrition" onMouseReleased="#handleNutrition" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="WHITE" layoutX="64.0" layoutY="194.0" onMouseClicked="#handleNutrition" onMousePressed="#handleNutrition" onMouseReleased="#handleNutrition" strokeType="OUTSIDE" strokeWidth="0.0" text="Nutrition">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="21.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/apple.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="sleep" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="43.0" layoutX="1.0" layoutY="210.0" onMouseClicked="#handleSleep" onMousePressed="#handleSleep" onMouseReleased="#handleSleep" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="64.0" layoutY="236.0" onMouseClicked="#handleSleep" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="21.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/bed.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="heartRate" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="39.0" layoutX="1.0" layoutY="253.0" onMouseClicked="#handleHeartRate" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="61.0" layoutY="278.0" onMouseClicked="#handleHeartRate" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart Rate">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="19.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/cardiogram.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="bodyMeasurments" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="39.0" layoutX="1.0" layoutY="292.0" onMouseClicked="#handleBodyMeasurements" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="59.0" layoutY="316.0" onMouseClicked="#handleBodyMeasurements" strokeType="OUTSIDE" strokeWidth="0.0" text="Body Measurements">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="20.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/scale.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="mentalWellbeing" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="41.0" layoutX="1.0" layoutY="331.0" onMouseClicked="#handleMentalWellbeing" onMousePressed="#handleMentalWellbeing" onMouseReleased="#handleMentalWellbeing" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="61.0" layoutY="358.0" onMouseClicked="#handleMentalWellbeing" strokeType="OUTSIDE" strokeWidth="0.0" text="Mental Welbeing">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="20.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/success.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="professional" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="41.0" layoutX="1.0" layoutY="372.0" onMouseClicked="#handleProfessional" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="62.0" layoutY="401.0" onMouseClicked="#handleProfessional" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional View">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="19.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/doctor.png" />
+         </image>
+      </ImageView>
+      <Line endX="922.0" layoutX="379.0" layoutY="82.0" startX="-100.0" stroke="#c6c6c6" />
+      <Label layoutX="301.0" layoutY="31.0" text="Nutrition" textFill="#616268">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="overall" arcHeight="5.0" arcWidth="5.0" fill="#3b3c3f" height="41.0" layoutX="1.0" layoutY="413.0" onMouseClicked="#handleOverall" onMousePressed="#handleOverall" onMouseReleased="#handleOverall" stroke="#b8b8b800" strokeType="INSIDE" width="278.0" />
+      <Text fill="#8d8d8d" layoutX="62.0" layoutY="441.0" onMouseClicked="#handleOverall" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall Dashboard">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="17.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/worldwide.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="254.0" layoutX="297.0" layoutY="476.0" stroke="#757575" strokeType="INSIDE" width="352.0" />
+      <ImageView fitHeight="150.0" fitWidth="55.0" layoutX="581.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/diet.png" />
+         </image>
+      </ImageView>
+      <Text fill="#3b3c3f" layoutX="309.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Calories Consumed">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Label fx:id="caloriesToday" layoutX="311.0" layoutY="508.0" text="Label" textFill="#616268">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Text fill="#616268" layoutX="314.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KCal">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="342.0" layoutX="668.0" layoutY="98.0" stroke="#757575" strokeType="INSIDE" width="616.0" />
+      <TableView fx:id="FoodList" layoutX="670.0" layoutY="101.0" prefHeight="337.0" prefWidth="616.0" stylesheets="@ChartsCSS.css">
+        <columns>
+          <TableColumn fx:id="dateColumn" prefWidth="110.94145202636719" text="Date" />
+            <TableColumn fx:id="foodNameColumn" prefWidth="195.54388427734375" text="Food Name" />
+            <TableColumn fx:id="caloriesColumn" prefWidth="110.4560546875" text="Calories" />
+            <TableColumn fx:id="mealTypeColumn" prefWidth="197.9586181640625" text="Meal Type" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="272.0" layoutX="669.0" layoutY="457.0" stroke="#757575" strokeType="INSIDE" width="616.0" />
+      <Text fill="#616268" layoutX="685.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Food Details">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Label fx:id="foodOutput" layoutX="914.0" layoutY="687.0" text="success">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <JFXDatePicker fx:id="userDate" defaultColor="#83c7cd" layoutX="684.0" layoutY="517.0" onAction="#addFood" promptText="Choose Date" />
+      <JFXTextField fx:id="foodName" focusColor="#83c7cd" labelFloat="true" layoutX="685.0" layoutY="573.0" onAction="#addFood" promptText="Food Name" unFocusColor="#979797">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="mealType" focusColor="#83c7cd" labelFloat="true" layoutX="686.0" layoutY="626.0" onAction="#addFood" promptText="Meal Type" unFocusColor="#979797">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="foodCalories" focusColor="#83c7cd" labelFloat="true" layoutX="686.0" layoutY="677.0" onAction="#addFood" promptText="Calories" unFocusColor="#979797">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="proteinText" focusColor="#83c7cd" labelFloat="true" layoutX="916.0" layoutY="625.0" onAction="#addFood" promptText="Protein" unFocusColor="#979797">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="carbohydrateText" focusColor="#83c7cd" labelFloat="true" layoutX="917.0" layoutY="571.0" onAction="#addFood" promptText="Carbohydrates" unFocusColor="#979797">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="fatText" focusColor="#83c7cd" labelFloat="true" layoutX="918.0" layoutY="517.0" onAction="#addFood" promptText="Fats" unFocusColor="#979797">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="enterfood" layoutX="1120.0" layoutY="580.0" onAction="#addFood" prefHeight="34.0" prefWidth="92.0" ripplerFill="#83c7cd" style="-fx-background-color: #3b3c3f#3b3c3f;" text="Enter" textFill="#f4f4f4">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="deleteFood" layoutX="1120.0" layoutY="620.0" onAction="#deleteFoodAction" prefHeight="34.0" prefWidth="92.0" ripplerFill="#83c7cd" style="-fx-background-color: #3b3c3f#3b3c3f;" text="Delete" textFill="#f4f4f4">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="312.0" layoutX="298.0" layoutY="146.0" stroke="#757575" strokeType="INSIDE" width="350.0" />
+      <PieChart fx:id="PieChart" layoutX="229.0" layoutY="109.0" legendVisible="false" prefHeight="387.0" prefWidth="469.0" startAngle="-146.3" stylesheets="@ChartsCSS.css" />
+      <JFXDatePicker fx:id="macroDate" defaultColor="#83c7cd" layoutX="437.0" layoutY="105.0" onAction="#loadMacros" prefHeight="29.0" prefWidth="200.0" promptText="Please Select the Date" />
+      <Label fx:id="benchmark" layoutX="309.0" layoutY="603.0" text="NUM" textFill="#616268">
+         <font>
+            <Font size="37.0" />
+         </font></Label>
+      <Label fx:id="moreless" layoutX="418.0" layoutY="624.0" text="more" textFill="#616268">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="newIdeal" layoutX="441.0" layoutY="659.0" text="1200" textFill="#616268">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <JFXTextField fx:id="userIdeal" focusColor="#53aec3" labelFloat="true" layoutX="309.0" layoutY="694.0" onAction="#updateIdeal" promptText="Ideal Calorie Count" />
+      <Text fill="#3b3c3f" layoutX="308.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calories Remaining for Goal">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="updateCalories" layoutX="477.0" layoutY="696.0" onAction="#updateIdeal" prefHeight="28.0" prefWidth="79.0" ripplerFill="#83c7cd" style="-fx-background-color: #3b3c3f#3b3c3f;" text="Update" textFill="#f4f4f4" />
+      <Text fill="#3b3c3f" layoutX="309.0" layoutY="673.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ideal Calories: ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#616268" layoutX="456.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="til goal">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#616268" layoutX="475.0" layoutY="673.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KCal">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#616268" layoutX="383.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KCal">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="exportCSV" layoutX="1050.0" layoutY="54.0" onAction="#csvFile" prefHeight="34.0" prefWidth="205.0" ripplerFill="#83c7cd" style="-fx-background-color: #3b3c3f#3b3c3f;" text="Export to CSV" textFill="#f4f4f4">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="exportSuccess" layoutX="1077.0" layoutY="1.0" prefHeight="55.0" prefWidth="217.0" text="Export Success" wrapText="true" />
+      <ImageView fx:id="exportSuccessImage" fitHeight="150.0" fitWidth="25.0" layoutX="1260.0" layoutY="59.0" onMouseClicked="#handleSharedFolder" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/help.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="299.0" layoutY="111.0" text="Choose Date:" textFill="#616268">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="435.0" layoutY="147.0" text="Macros" textFill="#616268">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

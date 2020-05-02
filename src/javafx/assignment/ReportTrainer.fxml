@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="842.0" prefWidth="595.0" stylesheets="@ChartsCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.assignment.ReportTrainerController">
+   <children>
+      <Text layoutX="174.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trainer's Report">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Label fx:id="firstName" layoutX="111.0" layoutY="84.0" text="fname" />
+      <Label fx:id="lastName" layoutX="166.0" layoutY="84.0" text="lname" />
+      <Label fx:id="birth" layoutX="111.0" layoutY="117.0" text="dob" />
+      <Label fx:id="weight" layoutX="388.0" layoutY="84.0" text="weight" />
+      <Label fx:id="height" layoutX="388.0" layoutY="117.0" text="height" />
+      <Text layoutX="62.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="68.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DOB:" />
+      <Text layoutX="330.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight:" />
+      <Text layoutX="330.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height:" />
+      <TableView fx:id="FoodList" layoutX="23.0" layoutY="160.0" prefHeight="249.0" prefWidth="541.0" stylesheets="@ChartsCSS.css">
+        <columns>
+          <TableColumn fx:id="dateColumn" prefWidth="145.0" text="Date" />
+          <TableColumn fx:id="foodNameColumn" prefWidth="159.0" text="Food Name" />
+            <TableColumn fx:id="caloriesColumn" prefWidth="96.0" text="Calories" />
+            <TableColumn fx:id="mealTypeColumn" prefWidth="107.0" text="Meal Type" />
+        </columns>
+      </TableView>
+      <Text layoutX="229.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nutrition Details">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="204.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aerobic Exercises Details">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TableView fx:id="AerobicExerciseList" layoutX="17.0" layoutY="425.0" prefHeight="194.0" prefWidth="556.0" stylesheets="@ChartsCSS.css">
+        <columns>
+          <TableColumn fx:id="aeDateCol" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="aeActivityCol" prefWidth="210.0" text="Activity" />
+            <TableColumn fx:id="aeMinsSpentCol" prefWidth="121.0" text="Minutes Spent" />
+            <TableColumn fx:id="aeCaloriesCol" prefWidth="118.0" text="Calories Burnt" />
+        </columns>
+      </TableView>
+      <Text layoutX="193.0" layoutY="641.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resistance Exercises Details">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TableView fx:id="ResistanceExerciseList" layoutX="17.0" layoutY="628.0" prefHeight="200.0" prefWidth="556.0">
+        <columns>
+          <TableColumn fx:id="reDateCol" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="reActivityCol" prefWidth="167.0" text="Activity" />
+            <TableColumn fx:id="reSetsCol" prefWidth="51.0" text="Sets" />
+            <TableColumn fx:id="reRepsCol" prefWidth="60.0" text="Reps" />
+            <TableColumn fx:id="reWeightCol" prefWidth="71.0" text="Weight" />
+            <TableColumn fx:id="reCaloriesCol" prefWidth="99.0" text="Calories Burnt" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
